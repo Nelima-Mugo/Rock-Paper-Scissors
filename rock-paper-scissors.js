@@ -23,7 +23,7 @@
 
     function autoPlay(){
       if (!isAutoPlaying) {
-        intervalID = setInterval(function(){
+        intervalID = setInterval(() => {
           const playerMove = pickComputerMove();
           playGame(playerMove);
         }, 1000);
@@ -89,8 +89,8 @@
       document.querySelector('.js-result').innerHTML = result;
 
       document.querySelector('.js-moves').innerHTML = `You 
-    <img class="move-icon" src="../Lesson10 - HTML CSS Javascript together/images/${playerMove}-emoji.png"> 
-    <img class="move-icon" src="../Lesson10 - HTML CSS Javascript together/images/${computerMove}-emoji.png"> 
+    <img class="move-icon" src="images/${playerMove}.png"> 
+    <img class="move-icon" src="images/${computerMove}.png"> 
     Computer`;
 
       updateScoreElement();
